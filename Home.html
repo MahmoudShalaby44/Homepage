@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Home</title>
+        <style>
+            ul{text-align:right; word-spacing:10px}
+            li{display:inline-block}
+            a{text-decoration:none; color:white }
+            label{color:white; font-size:50px}
+            body{background-size:1400px 800px; background-repeat:no-repeat; background-size: cover; overflow-x: hidden;}
+			      #learn{position : relative;right:0.5%; width : 102vw;}
+			      .booking{position:relative;left: 95px;}
+			      .learn{position:relative; top: 21px; right: 10px;}
+        </style>
+        <script>
+            function loadDoc() {
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("learn").innerHTML =
+                  this.responseText;
+                }
+              };
+              xhttp.open("GET", "learn.html", true);
+              xhttp.send();
+            }
+            </script>
+
+    </head>
+
+    <body background="background.jpg">
+
+        <ul>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">Gallery</a></li> 
+                <li><a href="">Contacts</a></li> 
+                <li><a href="">About</a></li>
+                <li><a href="">Home</a></li> 
+        </ul>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <label><center><b>French Restaurant</b></center></label>
+        <label><center><i>We’re the best restaurant in town</i></center></label>
+
+            <div>
+                <center><button class ="learn" onclick="loadDoc()">Learn More</button></center>
+            </div>
+
+            <center><a href="Booking.html" class = "booking"><button>Book A Visit</button></a></center>
+
+			<br><br><br>
+
+            <div id ="learn">
+
+            </div>
+
+    </body>
+</html>
